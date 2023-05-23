@@ -1,13 +1,12 @@
-﻿using Domain;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Presentation
+namespace Domain
 {
-    internal class ServiceSuccessResult<T> : ServiceResult<T>
+    public class ServiceSuccessResult<T> : ServiceResult<T>
     {
         public ServiceSuccessResult(T result)
         {

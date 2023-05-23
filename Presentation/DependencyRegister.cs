@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using static System.Net.Mime.MediaTypeNames;
 using Domain;
 using Business;
+using DataAccess;
 
 namespace Presentation
 {
@@ -16,7 +17,8 @@ namespace Presentation
         {
             var servicecollection = new ServiceCollection();
             servicecollection.AddSingleton<IApplication, Application>();
-            servicecollection.AddTransient<IGetUserService, GetUserService>();
+            servicecollection.AddTransient<IUserService, UserService>();
+            servicecollection.AddTransient<IUserRepository, UserRepository>();
             //servicecollection.AddTransient<ISignUpService, SignUpService>();
 
             return servicecollection.BuildServiceProvider();

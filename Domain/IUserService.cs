@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Domain
 {
-    public interface IGetUserService
+    public interface IUserService
     {
+        ServiceResult<User> GetUserByUserName(string userName);
     }
 }
